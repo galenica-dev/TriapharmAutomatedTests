@@ -1,9 +1,10 @@
-name: ASP.NET 8 CI/CD
+name: WebApiClientService (ASP NET 8)
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -25,10 +26,13 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore dependencies
+        working-directory: ./WebApiClientService
         run: dotnet restore
 
       - name: Build
+        working-directory: ./WebApiClientService
         run: dotnet build --configuration Release --no-restore
 
       - name: Publish
-        run: cd WebApiClientService && dotnet publish -c Release -o -r win-x64 --self-contained false ./publish
+        working-directory: ./WebApiClientService
+        run: dotnet publish -c Release -o -r win-x64 --self-contained false ./publish
