@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Coverage" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Products" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="InsuranceCardValidation">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q1:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CoverageInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CovercardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpiryDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValidatedBy" type="xs:int" />
+          <xs:element minOccurs="0" name="ValidationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValidationRequest" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidationResult" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InsuranceCardValidation" nillable="true" type="tns:InsuranceCardValidation" />
+  <xs:complexType name="Patient">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdvanceBlocked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AuthorizationGranted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockDossierTax" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockLineTax" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockNarcoticTax" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockNewPatientTax" type="xs:boolean" />
+          <xs:element minOccurs="0" name="BlockTreatmentExtensionTax" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Blocking" type="tns:BlockingType" />
+          <xs:element minOccurs="0" name="CanBeSoldTo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckDrugInteraction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CommunicationDenied" type="xs:boolean" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Coverage" minOccurs="0" name="Covers" nillable="true" type="q2:ArrayOfCoverage" />
+          <xs:element minOccurs="0" name="CustomerCategoryDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerCategoryId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CustomerCentralRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerGroupDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerGroupId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+          <xs:element minOccurs="0" name="CustomerLocalRemark" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" minOccurs="0" name="DefaultPaymentType" type="q3:PatientPaymentType" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Products" minOccurs="0" name="DefaultVat" nillable="true" type="q4:Vat" />
+          <xs:element minOccurs="0" name="EmployeeCardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EpdId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalUniqueNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HasPrescription" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="InstitutionId" nillable="true" type="ser:guid" />
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="InstitutionRoles" nillable="true" type="q5:ArrayOfguid" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" minOccurs="0" name="InsuranceInvoiceCopyType" type="q6:InsuranceInvoiceCopyType" />
+          <xs:element minOccurs="0" name="MasterPatientIndex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MeasurementChangeDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Medifilm" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PassportNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientClearinghouseId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientClinicalChecks" nillable="true" type="tns:ArrayOfPatientClinicalCheck" />
+          <xs:element minOccurs="0" name="PatientId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PaymentTerms" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Relationships" nillable="true" type="tns:ArrayOfRelationship" />
+          <xs:element minOccurs="0" name="Reminders" nillable="true" type="tns:ArrayOfCustomerReminder" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="SendDunning" type="tns:ReminderCode" />
+          <xs:element minOccurs="0" name="SpecialPatientType" type="tns:SpecialPatient" />
+          <xs:element minOccurs="0" name="UseLargeFont" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Patient" nillable="true" type="tns:Patient" />
+  <xs:complexType name="Person">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Address">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Advertisement" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CommunicationItems" nillable="true" type="tns:ArrayOfCommunicationItem" />
+          <xs:element minOccurs="0" name="ContactAddress" nillable="true" type="tns:Address" />
+          <xs:element minOccurs="0" name="ContactPersonRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreationOn" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CustomerCard" nillable="true" type="tns:CustomerCard" />
+          <xs:element minOccurs="0" name="CustomerCategory" nillable="true" type="tns:CustomerCategory" />
+          <xs:element minOccurs="0" name="CustomerGroup" nillable="true" type="tns:CustomerGroup" />
+          <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EnterpriseIdentification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinanceAccountInfo" nillable="true" type="tns:FinanceAccountInfo" />
+          <xs:element minOccurs="0" name="Gender" type="tns:Gender" />
+          <xs:element minOccurs="0" name="GeographicalAddress" nillable="true" type="tns:Address" />
+          <xs:element minOccurs="0" name="IsDead" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Mailing" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedByUserId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="OmnichannelUuid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostalRoutingAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferentialId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SocialSecurityNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VatNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="Address">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q7:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressExternalNumericKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressId" type="xs:int" />
+          <xs:element minOccurs="0" name="AddressKeys" nillable="true" type="tns:ArrayOfAddressKey" />
+          <xs:element minOccurs="0" name="AddressMainKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressSupplement" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryIso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Language" type="q7:Language" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NameAddition" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Origin" type="tns:CustomerOrigin" />
+          <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Street1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Street2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="ArrayOfAddressKey">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressKey" nillable="true" type="tns:AddressKey" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressKey" nillable="true" type="tns:ArrayOfAddressKey" />
+  <xs:complexType name="AddressKey">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q8:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" type="tns:AddressKeyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressKey" nillable="true" type="tns:AddressKey" />
+  <xs:simpleType name="AddressKeyType">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+        </ActualType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Primary" />
+      <xs:enumeration value="Secondary" />
+      <xs:enumeration value="OldNumber" />
+      <xs:enumeration value="Number" />
+      <xs:enumeration value="Classification" />
+      <xs:enumeration value="EmployeeNumber" />
+      <xs:enumeration value="ExternalNumber" />
+      <xs:enumeration value="GlnNumber" />
+      <xs:enumeration value="EmployeeCardNumber" />
+      <xs:enumeration value="BarcodeVipCard">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Barcode">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CoverCard">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MasterPatientIndex">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">103</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AddressKeyType" nillable="true" type="tns:AddressKeyType" />
+  <xs:simpleType name="CustomerOrigin">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+        </ActualType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="PharmIndex" />
+      <xs:enumeration value="Central" />
+      <xs:enumeration value="Pharmacy">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PharmacyNotSyncedWithCentral">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CustomerOrigin" nillable="true" type="tns:CustomerOrigin" />
+  <xs:complexType name="Physician">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BillAddress" nillable="true" type="tns:Address" />
+          <xs:element minOccurs="0" name="CentralRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConcordatNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeactivationDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EanNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsLocalPharmacy" type="xs:boolean" />
+          <xs:element minOccurs="0" name="KskRegionGroup" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PharmacyRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhysicianGuid" type="ser:guid" />
+          <xs:element minOccurs="0" name="PhysicianRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TierGarantOnly" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Physician" nillable="true" type="tns:Physician" />
+  <xs:complexType name="ArrayOfCommunicationItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommunicationItem" nillable="true" type="tns:CommunicationItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommunicationItem" nillable="true" type="tns:ArrayOfCommunicationItem" />
+  <xs:complexType name="CommunicationItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q9:IdentifiableOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MainItem" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Nature" type="tns:Nature" />
+          <xs:element minOccurs="0" name="ReceiveSms" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" type="tns:CommunicationItemType" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CommunicationItem" nillable="true" type="tns:CommunicationItem" />
+  <xs:simpleType name="Nature">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Professional" />
+      <xs:enumeration value="Private" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Nature" nillable="true" type="tns:Nature" />
+  <xs:simpleType name="CommunicationItemType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Phone" />
+      <xs:enumeration value="Fax" />
+      <xs:enumeration value="CellPhone" />
+      <xs:enumeration value="Telex" />
+      <xs:enumeration value="Email" />
+      <xs:enumeration value="Web" />
+      <xs:enumeration value="ShortNumber" />
+      <xs:enumeration value="Pager" />
+      <xs:enumeration value="Bip" />
+      <xs:enumeration value="DirectLine" />
+      <xs:enumeration value="Internal" />
+      <xs:enumeration value="Facebook" />
+      <xs:enumeration value="Twitter" />
+      <xs:enumeration value="Rss" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CommunicationItemType" nillable="true" type="tns:CommunicationItemType" />
+  <xs:complexType name="CustomerCard">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q10:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActualLoyaltyPoints" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AppId" nillable="true" type="xs:string" />
+          <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Coupons" nillable="true" type="q11:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="History" nillable="true" type="tns:ArrayOfCustomerCardHistory" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OmniChannelUuid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="Prefix" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecretNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+          <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Vouchers" nillable="true" type="q12:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerCard" nillable="true" type="tns:CustomerCard" />
+  <xs:complexType name="ArrayOfCustomerCardHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerCardHistory" nillable="true" type="tns:CustomerCardHistory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerCardHistory" nillable="true" type="tns:ArrayOfCustomerCardHistory" />
+  <xs:complexType name="CustomerCardHistory">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q13:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Paid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValidFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerCardHistory" nillable="true" type="tns:CustomerCardHistory" />
+  <xs:complexType name="CustomerCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q14:IdentifiableOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiscountKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Notification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecialDiscountSchemaDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerCategory" nillable="true" type="tns:CustomerCategory" />
+  <xs:complexType name="CustomerGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q15:IdentifiableOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SpecialDiscountSchemaDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerGroup" nillable="true" type="tns:CustomerGroup" />
+  <xs:complexType name="FinanceAccountInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q16:IdentifiableOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BankReference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Clearing" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SwiftNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" type="tns:FinancialInstituteType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FinanceAccountInfo" nillable="true" type="tns:FinanceAccountInfo" />
+  <xs:simpleType name="FinancialInstituteType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Bank" />
+      <xs:enumeration value="Post" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FinancialInstituteType" nillable="true" type="tns:FinancialInstituteType" />
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="LegalPerson" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender" />
+  <xs:simpleType name="BlockingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="OnlySalesCash" />
+      <xs:enumeration value="DoNotSale" />
+      <xs:enumeration value="DoNotSaleAndAlertAuthority" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BlockingType" nillable="true" type="tns:BlockingType" />
+  <xs:simpleType name="AccidentCaseType">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+        </ActualType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LightCase" />
+      <xs:enumeration value="HeavyCase" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccidentCaseType" nillable="true" type="tns:AccidentCaseType" />
+  <xs:complexType name="ArrayOfPatientClinicalCheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientClinicalCheck" nillable="true" type="tns:PatientClinicalCheck" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientClinicalCheck" nillable="true" type="tns:ArrayOfPatientClinicalCheck" />
+  <xs:complexType name="PatientClinicalCheck">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q17:IdentifiableOfguid">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClinicalCheckId" type="ser:guid" />
+          <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastMenstruationDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RefreshDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientClinicalCheck" nillable="true" type="tns:PatientClinicalCheck" />
+  <xs:complexType name="ArrayOfRelationship">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Relationship" nillable="true" type="tns:Relationship" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRelationship" nillable="true" type="tns:ArrayOfRelationship" />
+  <xs:complexType name="Relationship">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q18:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RelatedPerson" nillable="true" type="tns:Person" />
+          <xs:element minOccurs="0" name="RelationshipType" type="tns:RelationshipType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Relationship" nillable="true" type="tns:Relationship" />
+  <xs:simpleType name="RelationshipType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Main" />
+      <xs:enumeration value="DeliveryTo" />
+      <xs:enumeration value="BillTo" />
+      <xs:enumeration value="SendBillTo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RelationshipType" nillable="true" type="tns:RelationshipType" />
+  <xs:complexType name="ArrayOfCustomerReminder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerReminder" nillable="true" type="tns:CustomerReminder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerReminder" nillable="true" type="tns:ArrayOfCustomerReminder" />
+  <xs:complexType name="CustomerReminder">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q19:IdentifiableOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CustomerFullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DurationInMinutes" type="xs:int" />
+          <xs:element minOccurs="0" name="MeetingDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Room" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerReminder" nillable="true" type="tns:CustomerReminder" />
+  <xs:simpleType name="ReminderCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Never" />
+      <xs:enumeration value="Send" />
+      <xs:enumeration value="Normal" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReminderCode" nillable="true" type="tns:ReminderCode" />
+  <xs:simpleType name="SpecialPatient">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="CustomerWithoutVat" />
+      <xs:enumeration value="DefaultPatient" />
+      <xs:enumeration value="Physician" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SpecialPatient" nillable="true" type="tns:SpecialPatient" />
+</xs:schema>

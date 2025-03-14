@@ -11,9 +11,24 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
 	<PackageReference Include="Microsoft.AspNetCore.App" />
 	<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.0" />
+	<PackageReference Include="System.ServiceModel.Http" Version="8.1.2" />
+	<PackageReference Include="System.ServiceModel.NetTcp" Version="8.1.2" />
+	<PackageReference Include="System.ServiceModel.Primitives" Version="8.1.2" />
+	<PackageReference Include="System.ServiceModel.Security" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DataGeneratorCore\DataGeneratorCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="HttpFiles\ProxyWcfRest\" />
+    <Folder Include="HttpFiles\Person\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PersonApi">
+      <HintPath>..\PersonApi\bin\Debug\PersonApi.exe</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

@@ -1,13 +1,16 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+//using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
+//using Microsoft.Extensions.DependencyInjection;
+//using Microsoft.Extensions.Hosting;
+//using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// **Register HttpClient in the DI container**
+builder.Services.AddHttpClient();
 
 builder.Host.UseWindowsService();
 
@@ -24,6 +27,7 @@ var app = builder.Build();
 
 app.UseRouting();
 app.UseStaticFiles();
+
 
 // Explicitly map HomeController at `/` to avoid ASP0014 warning
 app.MapGet("/", async (HttpContext context) =>

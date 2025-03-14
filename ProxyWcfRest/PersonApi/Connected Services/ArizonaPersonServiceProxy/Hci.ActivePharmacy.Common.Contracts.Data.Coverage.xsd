@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Coverage" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Coverage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" />
+  <xs:complexType name="ArrayOfCoverage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Coverage" nillable="true" type="tns:Coverage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCoverage" nillable="true" type="tns:ArrayOfCoverage" />
+  <xs:complexType name="Coverage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q1:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssignmentOfClaimNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CanValidate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CertificationCaseNumber" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" minOccurs="0" name="CertificationCaseType" nillable="true" type="q2:AccidentCaseType" />
+          <xs:element minOccurs="0" name="CertificationId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CertificationStatus" type="tns:CertificationStatus" />
+          <xs:element minOccurs="0" name="CheckType" type="tns:CoverageCheckType" />
+          <xs:element minOccurs="0" name="CoverageRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CoverageType" type="tns:CoverageType" />
+          <xs:element minOccurs="0" name="HasAssignmentOfClaim" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+          <xs:element minOccurs="0" name="InsuranceId" type="ser:guid" />
+          <xs:element minOccurs="0" name="InsuranceMemberNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InsuranceNetworkId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PharmacyRemark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RefundPercentage" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SecondaryCoverage" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValidationDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Coverage" nillable="true" type="tns:Coverage" />
+  <xs:simpleType name="CertificationStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+        </ActualType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="NotReceived" />
+      <xs:enumeration value="Received" />
+      <xs:enumeration value="Printed" />
+      <xs:enumeration value="SentOrCovercard" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CertificationStatus" nillable="true" type="tns:CertificationStatus" />
+  <xs:simpleType name="CoverageCheckType">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+        </ActualType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Cov" />
+      <xs:enumeration value="Doc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CoverageCheckType" nillable="true" type="tns:CoverageCheckType" />
+  <xs:simpleType name="CoverageType">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="BasicInsurance">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AdditionalInsurance">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="AccidentInsurance">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="MilitaryInsurance">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="DisabilityInsurance">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ComplementaryInsurance">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="CoverageType" nillable="true" type="tns:CoverageType" />
+</xs:schema>

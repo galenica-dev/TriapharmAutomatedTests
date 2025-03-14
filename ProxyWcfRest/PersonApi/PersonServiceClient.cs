@@ -1,13 +1,14 @@
 ﻿using System;
 //using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-//using System.ServiceModel;
+using System.ServiceModel;
+
 //using System.Linq;
 //using System.Text;
 //using System.Threading.Tasks;
 using Hci.Logging;
 using Hci.WcfHelper;
-//using PersonApi.ServiceReferencePerson;
+using PersonApi.ArizonaPersonServiceProxy;
 //using PatientServiceReference = PersonService2.ServiceReferencePerson.Patient;
 using Patient = Hci.ActivePharmacy.Common.Contracts.Data.Persons.Patient;
 
@@ -27,7 +28,7 @@ namespace PersonApi
         /// Initializes a new instance of the <see cref="PersonServiceClient" /> class.
         /// </summary>
         public PersonServiceClient()
-            : base(_log, null)
+            : base(_log, "NetTcpBinding_IPersonService") // "NetTcpBinding_IPersonService" instead of null
         {
             Start();
         }
