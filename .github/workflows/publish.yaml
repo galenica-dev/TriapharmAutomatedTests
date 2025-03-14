@@ -27,4 +27,4 @@ jobs:
 
       - name: Publish
         working-directory: ./WebApiClientService
-        run: dotnet publish -c Release -o -r win-x64 --self-contained false ./publish
+        run: dotnet publish -c Release -r win-x64 --self-contained false -o ./publish
