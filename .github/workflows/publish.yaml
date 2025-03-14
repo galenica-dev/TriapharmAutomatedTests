@@ -26,10 +26,13 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore dependencies
-        run: cd WebApiClientService && dotnet restore
+        working-directory: ./WebApiClientService
+        run: dotnet restore
 
       - name: Build
-        run: cd WebApiClientService && dotnet build --configuration Release --no-restore
+        working-directory: ./WebApiClientService
+        run: dotnet build --configuration Release --no-restore
 
       - name: Publish
-        run: cd WebApiClientService && dotnet publish -c Release -o -r win-x64 --self-contained false ./publish
+        working-directory: ./WebApiClientService
+        run: dotnet publish -c Release -o -r win-x64 --self-contained false ./publish
