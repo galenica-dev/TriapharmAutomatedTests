@@ -1,4 +1,4 @@
-name: WebApiClientService (ASP NET 8)
+name: WebApiClientService
 
 on:
   push:
