@@ -1,0 +1,5 @@
+GET http://{{server}}:5001/api/person/is-patient-exist/9AFC6B29-E369-49B7-B9F8-4689F542EE45
+Accept: application/json
+Connection : keep-alive
+Accept-Encoding : gzip, deflate, br
+Accept : */*

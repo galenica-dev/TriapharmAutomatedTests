@@ -1,0 +1,2 @@
+sc stop ProxyWcfRestPersonApiService
+sc delete ProxyWcfRestPersonApiService

@@ -1,11 +1,7 @@
 ﻿using Hci.WcfHelper;
-using PersonApi.ServiceReferencePerson;
+using PersonApi.ArizonaPersonServiceProxy;
 using System;
-//using System.Collections.Generic;
-//using System.Linq;
 using System.ServiceModel;
-//using System.Text;
-//using System.Threading.Tasks;
 using Patient = Hci.ActivePharmacy.Common.Contracts.Data.Persons.Patient;
 
 namespace PersonApi
@@ -77,3 +73,4 @@ namespace PersonApi
 
     }
 }
+

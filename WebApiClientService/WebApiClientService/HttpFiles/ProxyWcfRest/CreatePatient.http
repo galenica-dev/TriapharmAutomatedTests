@@ -1,0 +1,14 @@
+### Create a new patient
+POST http://{{server}}:5001/api/person/create-patient
+Content-Type: application/json
+
+{
+    "first-name": "Toto Test",
+    "last-name": "Tata",
+    "street1": "Rue Ruchonet 12",
+    "city": "Lausanne",
+    "postal-code": "1000",
+    "country-iso": "CH",
+    "language": 1, 
+    "date-of-birth": "1978-03-14T00:00:00"
+}

@@ -10,7 +10,7 @@ namespace WebApiClientService.Controllers.Api
         public IActionResult GetVersion()
         {
             return Ok(new { 
-                version = "1.0.0.2",
+                version = "1.0.0.3",
                 timestamp = DateTime.UtcNow
             });
         }

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Triamun.ActivePos.ServiceContract.DataImplementation.Various" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Triamun.ActivePos.ServiceContract.DataImplementation.Various" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDocumentFlow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentFlow" nillable="true" type="tns:DocumentFlow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentFlow" nillable="true" type="tns:ArrayOfDocumentFlow" />
+  <xs:complexType name="DocumentFlow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateLevel" type="xs:long" />
+      <xs:element minOccurs="0" name="DocumentHeaderId" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentHeaderInputDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocumentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentRank" type="xs:int" />
+      <xs:element minOccurs="0" name="FromDocument" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PDPrintText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PdCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentFlow" nillable="true" type="tns:DocumentFlow" />
+  <xs:complexType name="ArrayOfDocumentLineBasicInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentLineBasicInfo" nillable="true" type="tns:DocumentLineBasicInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentLineBasicInfo" nillable="true" type="tns:ArrayOfDocumentLineBasicInfo" />
+  <xs:complexType name="DocumentLineBasicInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Discount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InsuranceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PharmaCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhysicianName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="RenewableReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentLineBasicInfo" nillable="true" type="tns:DocumentLineBasicInfo" />
+</xs:schema>

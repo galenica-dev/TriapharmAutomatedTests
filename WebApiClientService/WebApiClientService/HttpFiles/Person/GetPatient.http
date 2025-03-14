@@ -1,0 +1,5 @@
+### Get Patient by GUID
+GET http://{{server}}:8080/api/person/get-patient/47B790C9-38E9-4F4F-A5FA-54A2B7309FF9
+Accept: application/json
+Connection: keep-alive
+Accept-Encoding: gzip, deflate, br

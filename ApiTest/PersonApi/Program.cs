@@ -1,10 +1,10 @@
 ﻿using System;
-using CommonPatient = Hci.ActivePharmacy.Common.Contracts.Data.Persons.Patient;
-using Person = Hci.ActivePharmacy.Common.Contracts.Data.Persons.Person;
+using Patient = Hci.ActivePharmacy.Common.Contracts.Data.Persons.Patient;
+//using Person = Hci.ActivePharmacy.Common.Contracts.Data.Persons.Person;
 using Language = Hci.ActivePharmacy.Common.Contracts.Data.Language;
-using PersonApi.ServiceReferencePerson;
-using Hci.ActivePharmacy.Common.Contracts.Data.Persons;
-using Hci.ActivePharmacy.Common.Contracts.Data.LoyaltyCardMicroService;
+//using PersonApi.ServiceReferencePerson;
+//using Hci.ActivePharmacy.Common.Contracts.Data.Persons;
+//using Hci.ActivePharmacy.Common.Contracts.Data.LoyaltyCardMicroService;
 
 namespace PersonApi
 {
@@ -14,7 +14,7 @@ namespace PersonApi
         static void Main(string[] args)
         {
             PersonServiceClient personServiceClient = new PersonServiceClient();
-            CommonPatient patient = new CommonPatient();
+            Patient patient = new Patient();
 
             bool back = false;
 
@@ -114,7 +114,7 @@ namespace PersonApi
         static public void GetPatient()
         {
             PersonServiceClient personServiceClient = new PersonServiceClient();
-            CommonPatient patient = new CommonPatient();
+            Patient patient = new Patient();
 
             Console.WriteLine("Get Patient");
             Guid patientGuid = Guid.Parse("47B790C9-38E9-4F4F-A5FA-54A2B7309FF9");
@@ -136,7 +136,7 @@ namespace PersonApi
 
             Console.WriteLine("Create Patient");
 
-            CommonPatient newPatient = new CommonPatient
+            Patient newPatient = new Patient
             {
                 //AddressId = 123456, // Dont use it for create patient
                 FirstName = "Toto Test",

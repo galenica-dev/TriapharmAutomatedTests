@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://triamun.ch/connectic/service/PersonService/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" targetNamespace="http://triamun.ch/connectic/service/PersonService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://triamun.ch/connectic/service/PersonService/Imports">
+      <xsd:import namespace="http://triamun.ch/connectic/service/PersonService/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Triamun.ActivePos.ServiceContract.DataImplementation.Various" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Coverage" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Products" />
+      <xsd:import namespace="Hci.ActivePharmacy.Common.Contracts.Global" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PersonService_AddValidationInsuranceCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddValidationInsuranceCard" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_AddValidationInsuranceCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddValidationInsuranceCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_AddValidationInsuranceCard_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q1:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_CheckPatientExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPatientExist" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_CheckPatientExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPatientExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_CheckPatientExist_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q2:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_CheckPatientVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPatientVersion" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_CheckPatientVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPatientVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_CheckPatientVersion_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q3:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_DeleteCoverage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCoverage" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_DeleteCoverage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCoverageResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_DeleteCoverage_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q4:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetAddressVguidById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressVguidById" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetAddressVguidById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressVguidByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetAddressVguidById_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q5:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetDocumentFlow_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFlow" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetDocumentFlow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetDocumentFlow_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q6:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetDocumentLinesBasicInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLinesBasicInfo" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetDocumentLinesBasicInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLinesBasicInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetDocumentLinesBasicInfo_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q7:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetInsuranceCardValidationHistories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceCardValidationHistories" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetInsuranceCardValidationHistories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceCardValidationHistoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetInsuranceCardValidationHistories_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q8:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatient" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatient_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q9:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatientByUniqueId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientByUniqueId" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatientByUniqueId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientByUniqueIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatientByUniqueId_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q10:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatientHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientHistory" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatientHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPatientHistory_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q11:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPhysicianName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicianName" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPhysicianName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicianNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_GetPhysicianName_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q12:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_IsTriaScanDocumentPhysicalPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsTriaScanDocumentPhysicalPatient" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_IsTriaScanDocumentPhysicalPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsTriaScanDocumentPhysicalPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_IsTriaScanDocumentPhysicalPatient_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q13:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_LastCoverageUsedDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:LastCoverageUsedDate" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_LastCoverageUsedDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LastCoverageUsedDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_LastCoverageUsedDate_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q14:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SaveMergeAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMergeAddresses" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SaveMergeAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMergeAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SaveMergeAddresses_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q15="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q15:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SavePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatient" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SavePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SavePatient_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q16="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q16:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SavePatientOmniChannelUuid_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientOmniChannelUuid" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SavePatientOmniChannelUuid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientOmniChannelUuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_SavePatientOmniChannelUuid_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q17="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q17:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_TriaScanDocumentFound_InputMessage">
+    <wsdl:part name="parameters" element="tns:TriaScanDocumentFound" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_TriaScanDocumentFound_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TriaScanDocumentFoundResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_TriaScanDocumentFound_ExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q18:ExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_UpdateCoverValidity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCoverValidity" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_UpdateCoverValidity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCoverValidityResponse" />
+  </wsdl:message>
+  <wsdl:message name="PersonService_UpdateCoverValidity_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q19="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q19:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:portType name="PersonService">
+    <wsdl:operation name="AddValidationInsuranceCard">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/AddValidationInsuranceCard" message="tns:PersonService_AddValidationInsuranceCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/AddValidationInsuranceCardResponse" message="tns:PersonService_AddValidationInsuranceCard_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/AddValidationInsuranceCardExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_AddValidationInsuranceCard_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatientExist">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/CheckPatientExist" message="tns:PersonService_CheckPatientExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/CheckPatientExistResponse" message="tns:PersonService_CheckPatientExist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/CheckPatientExistExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_CheckPatientExist_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPatientVersion">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/CheckPatientVersion" message="tns:PersonService_CheckPatientVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/CheckPatientVersionResponse" message="tns:PersonService_CheckPatientVersion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/CheckPatientVersionExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_CheckPatientVersion_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCoverage">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/DeleteCoverage" message="tns:PersonService_DeleteCoverage_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/DeleteCoverageResponse" message="tns:PersonService_DeleteCoverage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/DeleteCoverageExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_DeleteCoverage_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddressVguidById">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetAddressVguidById" message="tns:PersonService_GetAddressVguidById_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetAddressVguidByIdResponse" message="tns:PersonService_GetAddressVguidById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetAddressVguidByIdExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_GetAddressVguidById_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFlow">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetDocumentFlow" message="tns:PersonService_GetDocumentFlow_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetDocumentFlowResponse" message="tns:PersonService_GetDocumentFlow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetDocumentFlowExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_GetDocumentFlow_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLinesBasicInfo">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetDocumentLinesBasicInfo" message="tns:PersonService_GetDocumentLinesBasicInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetDocumentLinesBasicInfoResponse" message="tns:PersonService_GetDocumentLinesBasicInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetDocumentLinesBasicInfoExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_GetDocumentLinesBasicInfo_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceCardValidationHistories">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetInsuranceCardValidationHistories" message="tns:PersonService_GetInsuranceCardValidationHistories_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetInsuranceCardValidationHistoriesResponse" message="tns:PersonService_GetInsuranceCardValidationHistories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetInsuranceCardValidationHistoriesExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_GetInsuranceCardValidationHistories_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatient">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatient" message="tns:PersonService_GetPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatientResponse" message="tns:PersonService_GetPatient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatientExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_GetPatient_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientByUniqueId">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatientByUniqueId" message="tns:PersonService_GetPatientByUniqueId_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatientByUniqueIdResponse" message="tns:PersonService_GetPatientByUniqueId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatientByUniqueIdExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_GetPatientByUniqueId_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientHistory">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatientHistory" message="tns:PersonService_GetPatientHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatientHistoryResponse" message="tns:PersonService_GetPatientHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPatientHistoryExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_GetPatientHistory_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicianName">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPhysicianName" message="tns:PersonService_GetPhysicianName_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPhysicianNameResponse" message="tns:PersonService_GetPhysicianName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/GetPhysicianNameExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_GetPhysicianName_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsTriaScanDocumentPhysicalPatient">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/IsTriaScanDocumentPhysicalPatient" message="tns:PersonService_IsTriaScanDocumentPhysicalPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/IsTriaScanDocumentPhysicalPatientResponse" message="tns:PersonService_IsTriaScanDocumentPhysicalPatient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/IsTriaScanDocumentPhysicalPatientExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_IsTriaScanDocumentPhysicalPatient_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LastCoverageUsedDate">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/LastCoverageUsedDate" message="tns:PersonService_LastCoverageUsedDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/LastCoverageUsedDateResponse" message="tns:PersonService_LastCoverageUsedDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/LastCoverageUsedDateExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_LastCoverageUsedDate_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMergeAddresses">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SaveMergeAddresses" message="tns:PersonService_SaveMergeAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SaveMergeAddressesResponse" message="tns:PersonService_SaveMergeAddresses_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SaveMergeAddressesServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:PersonService_SaveMergeAddresses_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatient">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SavePatient" message="tns:PersonService_SavePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SavePatientResponse" message="tns:PersonService_SavePatient_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SavePatientServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:PersonService_SavePatient_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientOmniChannelUuid">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SavePatientOmniChannelUuid" message="tns:PersonService_SavePatientOmniChannelUuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SavePatientOmniChannelUuidResponse" message="tns:PersonService_SavePatientOmniChannelUuid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/SavePatientOmniChannelUuidServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:PersonService_SavePatientOmniChannelUuid_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TriaScanDocumentFound">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/TriaScanDocumentFound" message="tns:PersonService_TriaScanDocumentFound_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/TriaScanDocumentFoundResponse" message="tns:PersonService_TriaScanDocumentFound_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/TriaScanDocumentFoundExceptionDetailFault" name="ExceptionDetailFault" message="tns:PersonService_TriaScanDocumentFound_ExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCoverValidity">
+      <wsdl:input wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/UpdateCoverValidity" message="tns:PersonService_UpdateCoverValidity_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/UpdateCoverValidityResponse" message="tns:PersonService_UpdateCoverValidity_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/connectic/service/PersonService/PersonService/UpdateCoverValidityServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:PersonService_UpdateCoverValidity_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

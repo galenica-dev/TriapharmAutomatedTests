@@ -4,8 +4,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0E0CC3A1-8A02-4F26-8B8C-5E1F7FCDF578}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{9F36225A-B071-42A7-9EFC-8CA9922D505C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>PersonApi</RootNamespace>
     <AssemblyName>PersonApi</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
@@ -33,9 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ActivePharmacyContracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7b3470076b260b4f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\WebApiClientService\ActivePharmacyServerService\ActivePharmacyContracts.dll</HintPath>
+    <Reference Include="ActivePharmacyContracts">
+      <HintPath>..\ActivePharmacyServerService\ActivePharmacyContracts.dll</HintPath>
     </Reference>
     <Reference Include="Hci.Logging, Version=5.2.5.0, Culture=neutral, PublicKeyToken=7b3470076b260b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\Hci.Logging.5.2.5\lib\netstandard2.0\Hci.Logging.dll</HintPath>
@@ -43,26 +42,14 @@
     <Reference Include="Hci.WcfHelper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=7b3470076b260b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\Hci.WcfHelper.2.3.0\lib\net48\Hci.WcfHelper.dll</HintPath>
     </Reference>
-    <Reference Include="Hci.WcfToolkit, Version=2.5.5.0, Culture=neutral, PublicKeyToken=7b3470076b260b4f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Hci.WcfToolkit.2.5.5\lib\net48\Hci.WcfToolkit.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Logging, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Logging.8.0.0\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging.EventLog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Logging.EventLog.8.0.0\lib\net462\Microsoft.Extensions.Logging.EventLog.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Options, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Options.8.0.2\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
@@ -70,14 +57,32 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.2.2\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.4.2.2\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.4.2.2\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.9.0.3\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
@@ -89,6 +94,9 @@
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.6.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -108,7 +116,6 @@
       <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -116,85 +123,106 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Http, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.3.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.3.0\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ServiceReferencePerson\Reference.cs">
+    <Compile Include="Connected Services\ArizonaPersonServiceProxy\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="IPersonService.cs" />
+    <Compile Include="PersonController.cs" />
     <Compile Include="PersonServiceClient.cs" />
+    <Compile Include="PersonApiService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PersonApiService.Designer.cs">
+      <DependentUpon>PersonApiService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\ServiceReferencePerson\Arrays.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\Arrays.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\Hci.ActivePharmacy.Common.Contracts.Data.Coverage.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\Hci.ActivePharmacy.Common.Contracts.Data.Coverage.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\Hci.ActivePharmacy.Common.Contracts.Data.Persons.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\Hci.ActivePharmacy.Common.Contracts.Data.Persons.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\Hci.ActivePharmacy.Common.Contracts.Data.Products.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\Hci.ActivePharmacy.Common.Contracts.Data.Products.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\Hci.ActivePharmacy.Common.Contracts.Data.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\Hci.ActivePharmacy.Common.Contracts.Data.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\Hci.ActivePharmacy.Common.Contracts.Global.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\Hci.ActivePharmacy.Common.Contracts.Global.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\PersonApi.ServiceReferencePerson.DocumentFlow.datasource">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\PersonApi.ArizonaPersonServiceProxy.DocumentFlow.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\PersonApi.ServiceReferencePerson.DocumentLineBasicInfo.datasource">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\PersonApi.ArizonaPersonServiceProxy.DocumentLineBasicInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\PersonApi.ServiceReferencePerson.Patient.datasource">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\PersonApi.ArizonaPersonServiceProxy.Patient.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\service.wsdl" />
-    <None Include="Connected Services\ServiceReferencePerson\service.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\service.wsdl" />
+    <None Include="Connected Services\ArizonaPersonServiceProxy\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\service1.wsdl" />
-    <None Include="Connected Services\ServiceReferencePerson\service1.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\service1.wsdl" />
+    <None Include="Connected Services\ArizonaPersonServiceProxy\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\System.ServiceModel.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\System.ServiceModel.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReferencePerson\Triamun.ActivePos.ServiceContract.DataImplementation.Various.xsd">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\Triamun.ActivePos.ServiceContract.DataImplementation.Various.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="httpFiles\CreatePatient.http" />
+    <None Include="httpFiles\GetPatient.http" />
+    <None Include="httpFiles\http-client.env.json" />
+    <None Include="httpFiles\IsPatientExist.http" />
+    <None Include="_install.bat" />
     <None Include="packages.config" />
-    <None Include="Readme.md" />
+    <None Include="SelfNote.md" />
+    <None Include="_uninstall.bat" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReferencePerson\" />
+    <WCFMetadataStorage Include="Connected Services\ArizonaPersonServiceProxy\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReferencePerson\configuration91.svcinfo" />
+    <None Include="Connected Services\ArizonaPersonServiceProxy\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReferencePerson\configuration.svcinfo" />
+    <None Include="Connected Services\ArizonaPersonServiceProxy\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReferencePerson\Reference.svcmap">
+    <None Include="Connected Services\ArizonaPersonServiceProxy\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

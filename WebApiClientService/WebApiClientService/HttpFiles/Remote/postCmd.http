@@ -1,5 +1,5 @@
 ### Execute a Command
-POST http://localhost:8080/remote/cmd/execute
+POST http://{{server}}:8080/remote/cmd/execute
 Content-Type: application/json
 
 {
@@ -7,7 +7,7 @@ Content-Type: application/json
 }
 
 ### Another example - Run a custom command
-POST http://localhost:8080/remote/cmd/execute
+POST http://{{server}}:8080/remote/cmd/execute
 Content-Type: application/json
 
 {
