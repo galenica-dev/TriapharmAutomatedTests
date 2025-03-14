@@ -1,0 +1,18 @@
+﻿http://Dev.env.wsa_connection.disabled/backuped.into.TT_Backup_WSA_connection
+https://galenicagroupb2c.onmicrosoft.com/order-hub-dev/.default;this is scope not url
+https://galenicagroupb2c.onmicrosoft.com/cdf-events-in-dev/.default;this is scope not url
+https://galenicagroupb2c.onmicrosoft.com/order-hub-test/.default;this is scope not url
+https://galenicagroupb2c.onmicrosoft.com/cdf-events-in-int/.default;this is scope not url
+apswsCentralService;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsMasterCentralService;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsTriafinPortal;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsSunCard;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsSaferPaySuccessRedirect;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsSaferPay;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsOlpPrixPriceService;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsItemDispatcht;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsInterOp;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsDigitalShelf;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsArizonaRepPayment;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsArizonaREP;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check
+apswsAccounting;code to exclude => https://galenica.atlassian.net/wiki/spaces/TCBO/pages/1370128864/Contract+Service+Sanity+Check

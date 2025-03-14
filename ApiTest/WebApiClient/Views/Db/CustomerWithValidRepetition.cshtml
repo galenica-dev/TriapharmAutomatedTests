@@ -1,0 +1,25 @@
+﻿
+@model List<Tuple<string, string, string>>
+
+<div class="container mt-4">
+    <h2 class="mt-4">Customers with valid repetition</h2>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.Item1</td>
+                    <td>@customer.Item2</td>
+                    <td>@customer.Item3</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

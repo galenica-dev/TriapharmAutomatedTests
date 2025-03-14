@@ -1,0 +1,8 @@
+@searchTerm=DAFALGAN
+@nbRow=10
+@language=1
+GET http://{{server}}/WebApiClient/Db/GetProductsInfo?nbRow={{nbRow}}&language={{language}}&searchTerm={{searchTerm}}
+Accept: application/json
+Connection : keep-alive
+Accept-Encoding : gzip, deflate, br
+Accept : */*

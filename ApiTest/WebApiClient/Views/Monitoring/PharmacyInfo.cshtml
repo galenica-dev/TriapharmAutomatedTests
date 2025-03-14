@@ -1,0 +1,41 @@
+﻿@model List<WebApiClient.Models.PharmacyInfoViewModel>
+
+<div class="container mt-4">
+    <h2>Pharmacy Information</h2>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Ou Code</th>
+                <th>Ou ID</th>
+                <th>Pharmacy Name</th>
+                <th>Pharmacy Version</th>
+                <th>Date Version</th>
+                <th>Language</th>
+                <th>Pharmacy GLN</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var pharmacy in Model)
+                {
+                    <tr>
+                        <td>@pharmacy.OuCode</td>
+                        <td>@pharmacy.OuId</td>
+                        <td>@pharmacy.PharmacyName</td>
+                        <td>@pharmacy.PharmacyVersion</td>
+                        <td>@pharmacy.VersionDate</td>
+                        <td>@pharmacy.Language</td>
+                        <td>@pharmacy.PharmacyGln</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center">No data available</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

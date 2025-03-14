@@ -1,0 +1,2 @@
+﻿To run test in command line : C:\QaTools\nunit\nunit3-console.exe ApiSmokeTest.dll
+To generate allure report (no working) : C:\QaTools\allure-2.32.0\allure-2.32.0\bin\allure.bat generate allure-results --clean -o allure-report 

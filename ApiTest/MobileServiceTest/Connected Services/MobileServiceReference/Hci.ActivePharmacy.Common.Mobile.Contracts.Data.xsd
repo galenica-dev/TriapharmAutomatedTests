@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ExtensibleDataContract">
+    <xs:sequence />
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="ExtensibleDataContract" nillable="true" type="tns:ExtensibleDataContract" />
+  <xs:simpleType name="Language">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="German" />
+      <xs:enumeration value="French" />
+      <xs:enumeration value="Italian" />
+      <xs:enumeration value="English" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Language" nillable="true" type="tns:Language" />
+  <xs:simpleType name="PharmacyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Amavita" />
+      <xs:enumeration value="SunStore" />
+      <xs:enumeration value="Independent" />
+      <xs:enumeration value="CoopVitality" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PharmacyType" nillable="true" type="tns:PharmacyType" />
+  <xs:complexType name="IdentifiableOfint">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="IdentifiableOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IdentifiableOfint" nillable="true" type="tns:IdentifiableOfint" />
+</xs:schema>

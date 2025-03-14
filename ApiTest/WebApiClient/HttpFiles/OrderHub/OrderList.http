@@ -1,0 +1,17 @@
+# @name login
+POST {{TokenHostAddress}}?client_id={{client_id}}&client_secret={{client_secret}}&grant_type=client_credentials&scope={{scope}}
+Content-Type: application/x-www-form-urlencoded
+Connection : keep-alive
+Accept-Encoding : gzip, deflate, br
+Accept : */*
+
+
+###
+
+GET https://order-hub-{{Envi}}.api-nonprod.galenica.com/v1/orders?gln={{Gln}}&limit=10&pageNumber=1&startDate=2025-01-29T08:00:00+01:00
+Authorization: Bearer {{login.response.body.$.access_token}}
+Accept: application/json
+Connection : keep-alive
+Accept-Encoding : gzip, deflate, br
+Accept : */*
+Ocp-Apim-Subscription-Key : {{Ocp-Apim-Subscription-Key}}

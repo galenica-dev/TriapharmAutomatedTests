@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "ServerConfig";
+}
+
+<h2>ServerConfig</h2>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Api Method</th>
+            <th>Link and parameters</th>
+            <th>Request paylaod exemple</th>
+            <th>Response paylaod exemple</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Get pharmacy info</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/LocalService/PharmacyInfoJson</td>
+            <td>n/a</td>
+            <td>
+<pre><code>{
+    "OuCode": "008",
+    "OuId": 706,
+    "PharmacyName": "Development 008",
+    "PharmacyVersion": "24.5.24.32004",
+    "Language": "German",
+    "PharmacyGln": "7601001029620",
+    "VersionDate": null
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Set cvLoginSecondsAcceptance</td>
+            <td>HTTP GET</td>
+            <td>
+                <span style="color: red; font-weight: bold;">WARNING: Require Triapharm app restart</span><br />The new value to set in sec : newValue=15<br />
+                http://localhost/WebApiClient/Db/SetCvLoginSecondsAcceptance?newValue=15
+            </td>
+            <td>n/a</td>
+            <td>
+<pre><code>{
+    "Key": "cvLoginSecondsAcceptance",
+    "Value": "15"
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get cvLoginSecondsAcceptance</td>
+            <td>HTTP GET</td>
+            <td>
+                http://localhost/WebApiClient/Db/GetCvLoginSecondsAcceptance
+            </td>
+            <td>n/a</td>
+            <td>
+<pre><code>{
+    "Key": "cvLoginSecondsAcceptance",
+    "Value": "15"
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Set cvWebShopShippingPharmacy</td>
+            <td>HTTP GET</td>
+            <td>
+                <span style="color: red; font-weight: bold;">WARNING: Require Triapharm app restart</span><br />The new value true/false : newValue=0 (false) =1 (true)<br />
+                http://localhost/WebApiClient/Db/SetCvWebShopShippingPharmacy?newValue=0
+            </td>
+            <td>n/a</td>
+            <td>
+<pre><code>{
+    "Key": "cvWebShopShippingPharmacy",
+    "Value": "0"
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get cvWebShopShippingPharmacy</td>
+            <td>HTTP GET</td>
+            <td>
+                http://localhost/WebApiClient/Db/GetCvWebShopShippingPharmacy
+            </td>
+            <td>n/a</td>
+            <td>
+<pre><code>{
+    "Key": "cvWebShopShippingPharmacy",
+    "Value": "0"
+}</code></pre>
+            </td>
+        </tr>
+    </tbody>
+</table>

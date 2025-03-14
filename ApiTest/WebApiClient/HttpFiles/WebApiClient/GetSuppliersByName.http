@@ -1,0 +1,6 @@
+@SearchTerm=Galexis
+GET http://{{server}}/WebApiClient/Db/GetSuppliersByName?searchTerm={{SearchTerm}}
+Accept: application/json
+Connection : keep-alive
+Accept-Encoding : gzip, deflate, br
+Accept : */*

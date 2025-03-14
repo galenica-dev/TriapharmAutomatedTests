@@ -1,0 +1,6 @@
+@medicine=DAFALGAN
+GET http://{{server}}/WebApiClient/LocalService/MedicineJson?medicine={{medicine}}
+Accept: application/json
+Connection : keep-alive
+Accept-Encoding : gzip, deflate, br
+Accept : */*

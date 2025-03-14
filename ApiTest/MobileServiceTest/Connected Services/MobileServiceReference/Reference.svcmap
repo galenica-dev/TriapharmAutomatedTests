@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="6b7ac8fe-54b5-4ceb-8361-36a539bc9eb7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ad6188b2-c509-46cf-8ac2-d54db044ecce" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="94e7c7e5-a3c2-42fc-a62a-7eaa25b00720" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="4880b14f-c385-435d-b1ae-41e52a2e39c6" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="64a6775f-59c2-4afb-aed6-cf15ec93f4f7" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="e5fc23c9-b944-4d6c-a7c4-233e5209463f" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Item.xsd" MetadataType="Schema" ID="03b34141-289a-4723-92c0-6ef06300fbd0" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Mobile.Contracts.Data.xsd" MetadataType="Schema" ID="e32bd23d-210f-4f2d-9bc3-bd32009d7967" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Contracts.Global.xsd" MetadataType="Schema" ID="9c7f1dcc-adbb-413f-9fbc-40cf8ecda090" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="714b494a-4c71-44a0-9489-c92fb6a27c80" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Admin.xsd" MetadataType="Schema" ID="a476ae49-392d-4853-a30d-115bcefac488" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Stock.xsd" MetadataType="Schema" ID="eb6bed7f-1c37-4d57-bf2f-2117d0a636d2" SourceId="1" SourceUrl="https://cvi888aps:33365/ActivePharmacy/MobileService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

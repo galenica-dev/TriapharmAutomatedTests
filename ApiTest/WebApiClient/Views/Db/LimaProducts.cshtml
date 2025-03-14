@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "LimaProducts";
+    var limaProducts = ViewBag.Products as List<(string ItkKey, decimal FpPubPrice, decimal FpMmrPrice)>;
+}
+
+<h2>LimaProducts</h2>
+<div class="container mt-4">
+    <h2>Product List</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ITK Key</th>
+                    <th>FP Pub Price</th>
+                    <th>FP MMR Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in limaProducts)
+                {
+                    <tr>
+                        <td>@product.ItkKey</td>
+                        <td>@product.FpPubPrice.ToString("C")</td>
+                        <td>@product.FpMmrPrice.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

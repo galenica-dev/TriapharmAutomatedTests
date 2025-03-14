@@ -1,0 +1,150 @@
+﻿ 
+@{
+    ViewBag.Title = "Customer Personas";
+}
+
+<h2>Customer Personas</h2>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Api Method</th>
+            <th>Link and parameters</th>
+            <th>Request paylaod exemple</th>
+            <th>Response paylaod exemple</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Get customers with valid insurance</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/Db/CustomerWithValidInsuranceJson</td>
+            <td>n/a</td>
+            <td>
+<pre><code>[
+    {
+        "FirstName": "Rub",
+        "LastName": "TEST",
+        "AddressId": 1500042209,
+        "InsuranceName": "VIVACARE"
+    },
+    ...
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get customers with valid Repetition</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/Db/CustomerWithValidRepetitionJson</td>
+            <td>n/a</td>
+            <td>
+<pre><code>[
+    {
+    "FirstName": "Rub",
+    "LastName": "TEST",
+    "DateOfBirth": "1981-06-05 00:00:00",
+    "AddressId": 1500043367,
+    "OmnichannelUUID": "1645b53721bf8ec2df4a89a6132c4e59c806f329ac3096014f32e83eeb106b6c",
+    "PatientId": "dd980634-c37d-4965-bae5-73ee9a96bf55"
+    },
+    ...
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get Customer Repetitions</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/Db/GetCustomerRepetitions?topRow=20&patientId=dd980634-c37d-4965-bae5-73ee9a96bf55
+                <ul>
+                    <li>topRow=20 : number of rows</li>
+                    <li>patientId=dd980634-c37d-4965-bae5-73ee9a96bf55 : Guid patient id (from Get customers with valid Repetition)</li>
+                </ul></td>
+            <td>
+                n/a
+            </td>
+            <td>
+<pre><code>[
+    {
+    "RepetitionNo": "0bb17f02-7743-4ae4-93cb-d6a9a804a6ae",
+    "PatientId": "dd980634-c37d-4965-bae5-73ee9a96bf55",
+    "PhysicianId": "b4ab9692-1c56-4153-98d4-c60a962f9b62",
+    "ParentSalesOrderNo": "1501812774",
+    "RepetitionType": "2",
+    "LimitDate": "2024-10-16",
+    "DefaultEndDateRepetition": "2025-07-16",
+    "TotalQuantity": null,
+    "RemainingQuantity": null,
+    "PrescriptionNo": "f49bfef0-2a2e-4bc7-a7d0-c3f8f4705bb8",
+    "SalesOrderId": "1501812774",
+    "SalesOrderDetailId": "1506735422",
+    "ItemDescription": "Paracetamol Axapharm Filmtabl 1 g 40 Stk",
+    "ItemId": "6271358",
+    "Error": null
+    },
+    ...
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get customers in institution</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/Db/CustomersInInstitutionJson</td>
+            <td>n/a</td>
+            <td>
+<pre><code>[
+    {
+        "FirstName": "Rub",
+        "LastName": "TEST"
+    },
+    ...
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get customers with loyalty card</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/Db/CustomersCardJson</td>
+            <td>n/a</td>
+            <td>
+<pre><code>[
+    {
+        "FirstName": "Rub",
+        "LastName": "TEST"
+    },
+    ...
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get customers with AVS/AVH</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/Db/CustomerWithAVHJson</td>
+            <td>n/a</td>
+            <td>
+<pre><code>[
+    {
+        "FirstName": "Rub",
+        "LastName": "TEST"
+    },
+    ...
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get customers Employee</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/Db/CustomerEmployeeJson</td>
+            <td>n/a</td>
+            <td>
+<pre><code>[
+    {
+        "FirstName": "Rub",
+        "LastName": "TEST"
+    },
+    ...
+]</code></pre>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,67 @@
+﻿@using WebApiClient.Helper
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - WebApiClient</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #333;
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            @Html.ActionLink("WebApiClient", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("ApiList", "Index", "ApiList", new { area = "" }, new { @class = "nav-link" })</li>
+                    <!-- Conditionally display RemoteService and Monitoring links based on the host -->
+                    @if (System.Net.Dns.GetHostName().ToLower() == "cgal60280")
+                    {
+                        <li>@Html.ActionLink("DataGen", "Index", "DataGen", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Db", "Index", "Db", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("LocalService", "Index", "LocalService", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("RemoteService", "Index", "RemoteService", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("RemoteCmd", "Index", "RemoteCmd", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Monitoring", "Index", "Monitoring", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                </ul>
+            </div>
+            <!-- Display the Hostname here -->
+            <div class="navbar-text" style="color: red;">
+                <h3>@System.Net.Dns.GetHostName().ToLower()</h3>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - WebApiClient - Version: @VersionHelper.GetAssemblyVersion()</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

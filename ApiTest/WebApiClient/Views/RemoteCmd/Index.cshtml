@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Remote Command Execution";
+}
+
+<h2>Remote Command Execution</h2>
+
+<div>
+    <textarea id="commandPayload" class="form-control" style="width: 100%; max-width: 100%; margin: 0; padding: 0;" rows="10">
+{
+    "cmd": "dir"
+}
+    </textarea>
+    <button id="executeBtn">Execute Command</button>
+</div>
+
+<h3>Response</h3>
+<div>
+    <textarea id="responseOutput" class="form-control" style="width: 100%; max-width: 100%; margin: 0; padding: 0;" rows="30" readonly></textarea>
+</div>
+
+@section scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#executeBtn').click(function () {
+                // Parse the command payload from the textarea
+                var payload = JSON.parse($('#commandPayload').val());
+
+                // Disable the button and show a loading message
+                $('#executeBtn').prop('disabled', true).text('Executing...');
+                $('#responseOutput').val('Processing, please wait...');
+
+                $.ajax({
+                    url: '@Url.Action("ExecuteCmd", "RemoteCmd")',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    timeout: 600000, // Set timeout to 600 seconds (600,000 milliseconds)
+                    data: JSON.stringify({ cmd: payload.cmd }),
+                    success: function (data) {
+                        // Display the output and error in the response textarea
+                        $('#responseOutput').val('Output:\n' + data.output + '\n\nError:\n' + data.error);
+                    },
+                    error: function () {
+                        $('#responseOutput').val('Error executing command.');
+                    },
+                    complete: function () {
+                        // Re-enable the button and reset the text after request completes
+                        $('#executeBtn').prop('disabled', false).text('Execute Command');
+                    }
+                });
+            });
+        });
+    </script>
+}
+

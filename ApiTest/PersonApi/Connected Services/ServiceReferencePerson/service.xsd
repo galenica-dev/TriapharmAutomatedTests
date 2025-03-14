@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://triamun.ch/connectic/service/PersonService/" elementFormDefault="qualified" targetNamespace="http://triamun.ch/connectic/service/PersonService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Triamun.ActivePos.ServiceContract.DataImplementation.Various" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Coverage" />
+  <xs:element name="AddValidationInsuranceCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" minOccurs="0" name="validation" nillable="true" type="q1:InsuranceCardValidation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddValidationInsuranceCardResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPatientExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="patientId" type="q2:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPatientExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckPatientExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPatientVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" minOccurs="0" name="versionKey" type="q3:VersionKeyOfguid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPatientVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckPatientVersionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCoverage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="coverageGuid" type="q4:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCoverageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressVguidById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addressId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressVguidByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="GetAddressVguidByIdResult" nillable="true" type="q5:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFlow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentHeaderId" type="xs:int" />
+        <xs:element minOccurs="0" name="isoCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFlowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Triamun.ActivePos.ServiceContract.DataImplementation.Various" minOccurs="0" name="GetDocumentFlowResult" nillable="true" type="q6:ArrayOfDocumentFlow" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentLinesBasicInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentHeaderId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentLinesBasicInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Triamun.ActivePos.ServiceContract.DataImplementation.Various" minOccurs="0" name="GetDocumentLinesBasicInfoResult" nillable="true" type="q7:ArrayOfDocumentLineBasicInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsuranceCardValidationHistories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cardNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsuranceCardValidationHistoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInsuranceCardValidationHistoriesResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="patientId" type="q8:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" minOccurs="0" name="GetPatientResult" nillable="true" type="q9:Patient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientByUniqueId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="microserviceUuid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="triaPharmGuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientByUniqueIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" minOccurs="0" name="GetPatientByUniqueIdResult" nillable="true" type="q10:Patient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="addressId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetPatientHistoryResult" nillable="true" type="q11:ArrayOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhysicianName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentHeaderId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhysicianNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPhysicianNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsTriaScanDocumentPhysicalPatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="docNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsTriaScanDocumentPhysicalPatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsTriaScanDocumentPhysicalPatientResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastCoverageUsedDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="coverageGuid" type="q12:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastCoverageUsedDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LastCoverageUsedDateResult" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMergeAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" minOccurs="0" name="firstPatient" nillable="true" type="q13:Patient" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" minOccurs="0" name="secondPatient" nillable="true" type="q14:Patient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMergeAddressesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" minOccurs="0" name="patient" nillable="true" type="q15:Patient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Persons" minOccurs="0" name="SavePatientResult" nillable="true" type="q16:Patient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientOmniChannelUuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addressId" type="xs:int" />
+        <xs:element minOccurs="0" name="omniChannelUuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientOmniChannelUuidResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TriaScanDocumentFound">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="documentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TriaScanDocumentFoundResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TriaScanDocumentFoundResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCoverValidity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Coverage" minOccurs="0" name="cover" nillable="true" type="q17:Coverage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCoverValidityResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

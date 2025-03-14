@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Products" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data.Products" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" />
+  <xs:complexType name="Vat">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Contracts.Data" base="q1:IdentifiableOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" type="xs:int" />
+          <xs:element minOccurs="0" name="Rate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Vat" nillable="true" type="tns:Vat" />
+</xs:schema>

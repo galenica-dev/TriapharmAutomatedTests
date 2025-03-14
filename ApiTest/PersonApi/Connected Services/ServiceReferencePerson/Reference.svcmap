@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="26ffc8d8-1b4b-4af7-bb40-d057c208ac89" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:33321/Arizona/PersonService/service/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="596fd61c-a5ec-4a09-a895-7ca2f1f159ce" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="3630356b-cce0-4a90-b287-fb5da3e9e2f2" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="a86d2af2-2edb-440a-a9fb-132c471f6f20" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="89deaeb9-6430-424f-9b76-b536f17240d6" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Contracts.Data.Persons.xsd" MetadataType="Schema" ID="c97ca994-98c1-4dc1-8920-8f96a89b0c86" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Contracts.Data.xsd" MetadataType="Schema" ID="6b8dbd94-de77-4221-a6c9-5902070fe276" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="System.ServiceModel.xsd" MetadataType="Schema" ID="d1a3f3b6-88a1-4f59-b3b2-9499edea10a5" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="Triamun.ActivePos.ServiceContract.DataImplementation.Various.xsd" MetadataType="Schema" ID="bab02569-5d8a-4e0b-bb10-16c1524280bd" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="e00e30ef-5934-48fc-8fed-5d070db4f195" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Contracts.Data.Coverage.xsd" MetadataType="Schema" ID="4e31fd70-f77e-4641-ae5d-7f2e402f4cab" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Contracts.Data.Products.xsd" MetadataType="Schema" ID="1cba01bc-480a-4afa-b600-95fb6e3c6e8f" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+    <MetadataFile FileName="Hci.ActivePharmacy.Common.Contracts.Global.xsd" MetadataType="Schema" ID="8ea5e370-4c8b-452d-a4e1-d1e78c460333" SourceId="1" SourceUrl="net.tcp://localhost:33321/Arizona/PersonService/service/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

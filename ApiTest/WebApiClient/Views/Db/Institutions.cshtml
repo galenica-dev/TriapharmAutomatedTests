@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Institutions";
+    var institutions = ViewBag.Institutions as List<(string AdName, string ContractNumber, Guid UGuid)>;
+}
+
+<h2>Institutions</h2>
+<div class="container mt-4">
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Ad Name</th>
+                <th>Contract Number</th>
+                <th>UGuid</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var institution in institutions)
+            {
+                <tr>
+                    <td>@institution.AdName</td>
+                    <td>@institution.ContractNumber</td>
+                    <td>@institution.UGuid</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

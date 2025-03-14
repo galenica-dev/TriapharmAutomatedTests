@@ -1,0 +1,28 @@
+﻿@using WebApiClient.Models
+@model PharmacyInfoViewModel
+
+<div class="container mt-4">
+    <h2>Pharmacy Information</h2>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Ou Code</th>
+                <th>Ou ID</th>
+                <th>Pharmacy Name</th>
+                <th>Pharmacy Version</th>
+                <th>Language</th>
+                <th>Pharmacy GLN (From DB)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.OuCode</td>
+                <td>@Model.OuId</td>
+                <td>@Model.PharmacyName</td>
+                <td>@Model.PharmacyVersion</td>
+                <td>@Model.Language</td>
+                <td>@Model.PharmacyGln</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

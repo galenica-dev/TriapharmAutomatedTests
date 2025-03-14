@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="MobileService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_MobileService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/" location="" />
+  <wsdl:types />
+  <wsdl:binding name="CustomBinding_MobileService" type="i0:MobileService">
+    <wsp:PolicyReference URI="#CustomBinding_MobileService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddExpiryDates">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/AddExpiryDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BadgeLogin">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/BadgeLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeQuantityOnStock">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/ChangeQuantityOnStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpiryDates">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/DeleteExpiryDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScan">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/DeleteScan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenInventories">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetOpenInventories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPharmacyServerInfo">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetPharmacyServerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockCorrectionTypes">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetStockCorrectionTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageAreasByItem">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetStorageAreasByItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadInventoryItems">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/LoadInventoryItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExpiryDates">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SaveExpiryDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveScans">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SaveScans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchArticles">
+      <soap:operation soapAction="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SearchArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceExceptionDetailFault">
+        <soap:fault use="literal" name="ServiceExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MobileService">
+    <wsdl:port name="CustomBinding_MobileService" binding="tns:CustomBinding_MobileService">
+      <soap:address location="https://localhost:33365/ActivePharmacy/MobileService/MobileService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

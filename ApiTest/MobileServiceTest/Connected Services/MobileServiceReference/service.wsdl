@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" targetNamespace="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/Imports">
+      <xsd:import schemaLocation="" namespace="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/" />
+      <xsd:import schemaLocation="" namespace="Hci.ActivePharmacy.Common.Contracts.Global" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Item" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Admin" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Stock" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MobileService_AddExpiryDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpiryDates" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_AddExpiryDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpiryDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_AddExpiryDates_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q1:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_BadgeLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:BadgeLogin" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_BadgeLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BadgeLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_BadgeLogin_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q2:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_ChangeQuantityOnStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeQuantityOnStock" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_ChangeQuantityOnStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeQuantityOnStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_ChangeQuantityOnStock_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q3:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_DeleteExpiryDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExpiryDates" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_DeleteExpiryDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExpiryDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_DeleteExpiryDates_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q4:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_DeleteScan_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteScan" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_DeleteScan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteScanResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_DeleteScan_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q5:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetOpenInventories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenInventories" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetOpenInventories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenInventoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetOpenInventories_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q6:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetPharmacyServerInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPharmacyServerInfo" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetPharmacyServerInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPharmacyServerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetPharmacyServerInfo_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q7:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetStockCorrectionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockCorrectionTypes" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetStockCorrectionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockCorrectionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetStockCorrectionTypes_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q8:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetStorageAreasByItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageAreasByItem" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetStorageAreasByItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStorageAreasByItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_GetStorageAreasByItem_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q9:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_LoadInventoryItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadInventoryItems" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_LoadInventoryItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadInventoryItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_LoadInventoryItems_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q10:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_Login_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q11:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SaveExpiryDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveExpiryDates" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SaveExpiryDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveExpiryDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SaveExpiryDates_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q12:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SaveScans_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScans" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SaveScans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScansResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SaveScans_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q13:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SearchArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchArticles" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SearchArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileService_SearchArticles_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="Hci.ActivePharmacy.Common.Contracts.Global" name="detail" element="q14:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:portType name="MobileService">
+    <wsdl:operation name="AddExpiryDates">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/AddExpiryDates" message="tns:MobileService_AddExpiryDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/AddExpiryDatesResponse" message="tns:MobileService_AddExpiryDates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/AddExpiryDatesServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_AddExpiryDates_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BadgeLogin">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/BadgeLogin" message="tns:MobileService_BadgeLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/BadgeLoginResponse" message="tns:MobileService_BadgeLogin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/BadgeLoginServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_BadgeLogin_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeQuantityOnStock">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/ChangeQuantityOnStock" message="tns:MobileService_ChangeQuantityOnStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/ChangeQuantityOnStockResponse" message="tns:MobileService_ChangeQuantityOnStock_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/ChangeQuantityOnStockServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_ChangeQuantityOnStock_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpiryDates">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/DeleteExpiryDates" message="tns:MobileService_DeleteExpiryDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/DeleteExpiryDatesResponse" message="tns:MobileService_DeleteExpiryDates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/DeleteExpiryDatesServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_DeleteExpiryDates_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScan">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/DeleteScan" message="tns:MobileService_DeleteScan_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/DeleteScanResponse" message="tns:MobileService_DeleteScan_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/DeleteScanServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_DeleteScan_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenInventories">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetOpenInventories" message="tns:MobileService_GetOpenInventories_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetOpenInventoriesResponse" message="tns:MobileService_GetOpenInventories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetOpenInventoriesServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_GetOpenInventories_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPharmacyServerInfo">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetPharmacyServerInfo" message="tns:MobileService_GetPharmacyServerInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetPharmacyServerInfoResponse" message="tns:MobileService_GetPharmacyServerInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetPharmacyServerInfoServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_GetPharmacyServerInfo_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockCorrectionTypes">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetStockCorrectionTypes" message="tns:MobileService_GetStockCorrectionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetStockCorrectionTypesResponse" message="tns:MobileService_GetStockCorrectionTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetStockCorrectionTypesServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_GetStockCorrectionTypes_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStorageAreasByItem">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetStorageAreasByItem" message="tns:MobileService_GetStorageAreasByItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetStorageAreasByItemResponse" message="tns:MobileService_GetStorageAreasByItem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/GetStorageAreasByItemServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_GetStorageAreasByItem_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadInventoryItems">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/LoadInventoryItems" message="tns:MobileService_LoadInventoryItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/LoadInventoryItemsResponse" message="tns:MobileService_LoadInventoryItems_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/LoadInventoryItemsServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_LoadInventoryItems_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/Login" message="tns:MobileService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/LoginResponse" message="tns:MobileService_Login_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/LoginServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_Login_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveExpiryDates">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SaveExpiryDates" message="tns:MobileService_SaveExpiryDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SaveExpiryDatesResponse" message="tns:MobileService_SaveExpiryDates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SaveExpiryDatesServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_SaveExpiryDates_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveScans">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SaveScans" message="tns:MobileService_SaveScans_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SaveScansResponse" message="tns:MobileService_SaveScans_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SaveScansServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_SaveScans_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchArticles">
+      <wsdl:input wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SearchArticles" message="tns:MobileService_SearchArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SearchArticlesResponse" message="tns:MobileService_SearchArticles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://triamun.ch/ActivePharmacy/Common/Mobile/MobileService/MobileService/SearchArticlesServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:MobileService_SearchArticles_ServiceExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

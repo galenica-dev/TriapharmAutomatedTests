@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Partners";
+}
+
+<h2>Partners</h2>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Api Method</th>
+            <th>Link and parameters</th>
+            <th>Request paylaod exemple</th>
+            <th>Response paylaod exemple</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Get Institutions list</td>
+            <td>HTTP GET</td>
+            <td>http://localhost/WebApiClient/Db/InstitutionsJson/</td>
+            <td>n/a</td>
+            <td>
+<pre><code>[
+    {
+        "AdName": "Casa per anziani Malcantonese",
+        "ContractNumber": "U700021",
+        "UGuid": "f087cc1a-3a4c-46e1-87ab-0cd0d2a80c88"
+    },
+    ...
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Get Suppliers list by Name</td>
+            <td>HTTP GET</td>
+            <td>
+                http://localhost/WebApiClient/Db/GetSuppliersByName?searchTerm=Galenica%20AG<br />
+                <img src="@Url.Content("~/Content/Images/AStockSearch.jpg")" alt="AStock" width="500"/>
+            </td>
+            <td>n/a</td>
+            <td>
+<pre><code>[
+    {
+        "Name": "Galenica AG",
+        "Code": "2256",
+        "AddressID": 526239,
+        "SupplierID": 55628
+        },
+        {
+        "Name": "Galenica AG",
+        "Code": "700462",
+        "AddressID": 4025334,
+        "SupplierID": 58888
+    }
+]</code></pre>
+            </td>
+        </tr>
+    </tbody>
+</table>

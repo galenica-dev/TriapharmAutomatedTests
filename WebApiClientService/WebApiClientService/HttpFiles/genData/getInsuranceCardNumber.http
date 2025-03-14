@@ -1,0 +1,5 @@
+GET http://{{server}}:8080/api/gen-data/insurance-card-number
+Accept: application/json
+Connection : keep-alive
+Accept-Encoding : gzip, deflate, br
+Accept : */*

@@ -1,0 +1,230 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    //string currentHost = Request.Url.Host;
+    string currentHost = System.Net.Dns.GetHostName().ToLower();
+}
+
+<main>
+    @if (System.Net.Dns.GetHostName().ToLower() == "cgal60280")
+    {
+        <div class="row">
+
+            <section class="col-md-4" aria-labelledby="n2env">
+                <h2 id="remoteServiceTitle">N+2</h2>
+                <p>List of environments available with WebApiClient on N+2</p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            <a class="btn @("SWAMA704VM02.CENTRALINFRA.NET-ama704aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWAMA704VM02.CENTRALINFRA.NET/WebApiClient/">
+                                ama704aps &raquo;
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn @("SWSUN007VM01.CENTRALINFRA.NET-sun007aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWSUN007VM01.CENTRALINFRA.NET/WebApiClient/">
+                                sun007aps &raquo;
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <a class="btn @("SWSUN008VM01.CENTRALINFRA.NET-sun008aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWSUN008VM01.CENTRALINFRA.NET/WebApiClient/">
+                                sun008aps &raquo;
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn @("hSWCVI506VM01.CENTRALINFRA.NET-cvi506aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWCVI506VM01.CENTRALINFRA.NET/WebApiClient/">
+                                cvi506aps &raquo;
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-md-4" aria-labelledby="n1busenv">
+                <h2 id="remoteServiceTitle">N+1 Business</h2>
+                <p>
+                    List of environments available with WebApiClient on N+1 Business
+                </p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            <a class="btn @("swama705vm01.centralinfra.net-ama705aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWAMA705VM01.centralinfra.net/WebApiClient/">
+                                ama705aps (v-1) &raquo;
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn @("swcvi504vm01.centralinfra.net-cvi504aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWCVI504VM01.centralinfra.net/WebApiClient/">
+                                cvi504aps (v-1) &raquo;
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn @("swsun006vm01.centralinfra.net-sun006aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWSUN006VM01.centralinfra.net/WebApiClient/">
+                                sun006aps (v-1) &raquo;
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <a class="btn @("swama707vm01.centralinfra.net-ama707aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWAMA707VM01.centralinfra.net/WebApiClient/">
+                                ama707aps (v-2) &raquo;
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn @("swcvi503vm01.centralinfra.net-cvi503aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWCVI503VM01.centralinfra.net/WebApiClient/">
+                                cvi503aps (v-2) &raquo;
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn @("swsun004vm01.centralinfra.net-sun004aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWSUN004VM01.centralinfra.net/WebApiClient/">
+                                sun004aps (v-2) &raquo;
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-md-4" aria-labelledby="n1autoenv">
+                <h2 id="remoteServiceTitle">N+1 Automation</h2>
+                <p>
+                    List of environments available with WebApiClient on N+1 Automation
+                </p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            <a class="btn @("swama888vm01.centralinfra.net-ama888aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWAMA888VM01.centralinfra.net/WebApiClient/">
+                                ama888aps &raquo;
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn @("swsun888vm01.centralinfra.net-sun888aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWSUN888VM01.centralinfra.net/WebApiClient/">
+                                sun888aps &raquo;
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <a class="btn @("swcvi888vm01.centralinfra.net-cvi888aps".ToLower().Contains(currentHost) ? "btn-primary" : "btn-outline-dark")"
+                               href="http://SWCVI888VM01.centralinfra.net/WebApiClient/">
+                                cvi888aps &raquo;
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    }
+    <div class="row">
+
+        <section class="col-md-8" aria-labelledby="Personas">
+            <h2 id="dataGenTitle">Personas (Type of customer)</h2>
+            <p>
+                Using personas allows marketers to tailor messages, campaigns, product offerings, and customer journeys more effectively, ensuring that each marketing effort resonates with a specific, well-understood audience segment. They can also help different teams within a company (like sales, product development, and customer service) align on who the target customer is and how best to serve them.
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithValidInsurance">Customer with valid Insurance &raquo;</a></p>
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithValidRepetition">Customer with valid repetitions &raquo;</a></p>
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomersInInstitution">Customer in institution &raquo;</a></p>
+                </div>
+
+                <div class="col-md-6">
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomersCard">Customers with loyalty card &raquo;</a></p>
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithAVH">Customer with AVS/AHV &raquo;</a></p>
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerEmployee">Customer employee &raquo;</a></p>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4" aria-labelledby="localServciceTitle">
+            <h2 id="localServciceTitle">Server info/config</h2>
+            <p>Get all info about this info and configuration</p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/LocalService/PharmacyInfo">Server info &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CvWebShopShippingPharmacy">Shipping Pharmacy &raquo;</a></p>
+        </section>
+    </div>
+
+    <div class="row">
+        <section class="col-md-8" aria-labelledby="dataGenTitle">
+            <h2 id="dataGenTitle">Products</h2>
+            <p>
+                In this list how to handel products
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/ProductInfo">Search for a product info &raquo;</a></p>
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/ProductsLore">Search for a product LoRe &raquo;</a></p>
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/ProductLinks">Search for a chained product &raquo;</a></p>
+                </div>
+                <div class="col-md-6">
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/LocalService/Medicine">Search for a product with stock &raquo;</a></p>
+                    <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/LimaProducts">Get list of LIMA &raquo;</a></p>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-4" aria-labelledby="remoteServiceTitle">
+            <h2 id="remoteServiceTitle">Partners</h2>
+            <p>
+                In this list how to handel partners
+            </p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/Supplier">Get list of wholesalers (suppliers) &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/Institutions">Get list of institutions &raquo;</a></p>
+        </section>
+
+    </div>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="dataGenTitle">
+            <h2 id="dataGenTitle">Data Generation</h2>
+            <p>
+                In this section you could generate AVS/AVH or Medical numbers
+            </p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/DataGen/Avs">Generate AVS/AVH &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/DataGen/InsuranceCardNumber">Generate InsuranceCardNumber &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="remoteServiceTitle">
+            <h2 id="remoteServiceTitle">Integration test</h2>
+            <p>
+                For integration purpose: trigger or validate other component process that interact with Triapharm
+            </p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/RemoteService/eRx">Trigger eRx &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/RemoteService/OrderHubOrders">Trigger Online Order &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="apiListTitle">
+            <h2 id="remoteServiceTitle">API List</h2>
+            <p>
+                List of API usable for automated test
+            </p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/ApiList">More info &raquo;</a></p>
+        </section>
+    </div>
+
+    @if (System.Net.Dns.GetHostName().ToLower() == "cgal60280")
+    {
+        <div class="row">
+
+            <section class="col-md-4" aria-labelledby="remoteServiceTitle">
+                <h2 id="remoteServiceTitle">Monitoring</h2>
+                <p>
+                    Monitor the services and get the status of the services
+                </p>
+                <p><a class="btn btn-outline-dark" href="/WebApiClient/Monitoring">Learn more &raquo;</a></p>
+            </section>
+            
+        </div>
+    }
+
+    </main>

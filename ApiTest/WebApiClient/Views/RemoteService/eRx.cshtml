@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "eRx";
+}
+
+<main>
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="dataGenTitle">
+            <h2 id="dataGenTitle">eRX</h2>
+            <p>
+                What we do here?
+                <ul>
+                    <li>Get a customer from institution (Persona) or <a href="/WebApiClient/Db/CustomerWithValidInsurance">get from customer with valid insurance</a></li>
+                    <li>Use eRx API</li>
+                    <li>Generate response based on AddressId of a customer</li>
+                </ul>
+            </p>
+
+            <!-- AddressId Search Form -->
+            <form asp-action="eRx" method="get">
+                <label for="AddressId">Enter AddressId:</label>
+                <input type="text" id="AddressId" name="AddressId" class="form-control" placeholder="AddressId" />
+                <button type="submit" class="btn btn-primary mt-2">Search</button>
+            </form>
+        </section>
+        <section class="col-md-8" aria-labelledby="dataGenTitle">
+            <h4>@ViewBag.SearchType</h4>
+            <p>
+                First name: @ViewBag.FirstName <br />
+                Last name: @ViewBag.LastName
+            </p>
+
+            <p>
+                APOS Payload <b>HappyPath</b> with medicine <b>CatB</b>:
+                <textarea class="form-control" style="width: 100%; max-width: 100%; margin: 0; padding: 0;" rows="10" readonly>@ViewBag.HappyPathResponseB</textarea>
+            </p>
+
+            <p>
+                APOS Payload <b>HappyPath</b> with medicine <b>CatA</b>:
+                <textarea class="form-control" style="width: 100%; max-width: 100%; margin: 0; padding: 0;" rows="10" readonly>@ViewBag.HappyPathResponseA</textarea>
+            </p>
+
+            <p>
+                APOS Payload <b>HappyPath</b> with medicine <b>CatC</b>:
+                <textarea class="form-control" style="width: 100%; max-width: 100%; margin: 0; padding: 0;" rows="10" readonly>@ViewBag.HappyPathResponseC</textarea>
+            </p>
+
+            <p>
+                APOS Payload <b>Date Expired</b> with medicine <b>CatA</b>:
+                <textarea class="form-control" style="width: 100%; max-width: 100%; margin: 0; padding: 0;" rows="10" readonly>@ViewBag.DateExpiredResponseA</textarea>
+            </p>
+        </section>
+    </div>
+</main>

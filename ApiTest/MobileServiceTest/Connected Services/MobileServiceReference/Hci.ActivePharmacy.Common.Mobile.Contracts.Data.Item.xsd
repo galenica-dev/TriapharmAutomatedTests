@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Item" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Item" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" />
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ExpiryDate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q1:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatchNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ExpiryDateId" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpiryDateType" type="tns:ExpiryDateType" />
+          <xs:element minOccurs="0" name="ItemExpiryDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ItemRevisionId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpiryDate" nillable="true" type="tns:ExpiryDate" />
+  <xs:simpleType name="ExpiryDateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Manual" />
+      <xs:enumeration value="Automatic" />
+      <xs:enumeration value="Wholesaler" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpiryDateType" nillable="true" type="tns:ExpiryDateType" />
+  <xs:complexType name="ArrayOfExpiryDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpiryDate" nillable="true" type="tns:ExpiryDate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpiryDate" nillable="true" type="tns:ArrayOfExpiryDate" />
+  <xs:complexType name="ScanResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q2:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Error" type="tns:ScanError" />
+          <xs:element minOccurs="0" name="InventoryScanId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="ScannedItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="SyncTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScanResult" nillable="true" type="tns:ScanResult" />
+  <xs:simpleType name="ScanError">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoError" />
+      <xs:enumeration value="NoDeviceIdentifier" />
+      <xs:enumeration value="NoInventoryForItemId" />
+      <xs:enumeration value="UserIdNotExisting" />
+      <xs:enumeration value="NoOpenInventory" />
+      <xs:enumeration value="MultipleOpenInventory" />
+      <xs:enumeration value="InvalidInventoryScanId" />
+      <xs:enumeration value="DeviceAndScanIdMismatch" />
+      <xs:enumeration value="InventoryDetailNotFound" />
+      <xs:enumeration value="OtherError">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ScanError" nillable="true" type="tns:ScanError" />
+  <xs:complexType name="ArrayOfInventoryItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventoryItem" nillable="true" type="tns:InventoryItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventoryItem" nillable="true" type="tns:ArrayOfInventoryItem" />
+  <xs:complexType name="InventoryItem">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q3:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemCodes" nillable="true" type="tns:ArrayOfItemCode" />
+          <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="QuantityOnStock" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventoryItem" nillable="true" type="tns:InventoryItem" />
+  <xs:complexType name="ArrayOfItemCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemCode" nillable="true" type="tns:ItemCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemCode" nillable="true" type="tns:ArrayOfItemCode" />
+  <xs:complexType name="ItemCode">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q4:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" type="tns:CodeType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ItemCode" nillable="true" type="tns:ItemCode" />
+  <xs:simpleType name="CodeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="Main" />
+      <xs:enumeration value="Secondary" />
+      <xs:enumeration value="Technical" />
+      <xs:enumeration value="OldNumber" />
+      <xs:enumeration value="Barcode" />
+      <xs:enumeration value="BarcodeAlternatif" />
+      <xs:enumeration value="ItemDescription">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ItemUsageDescription">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CodeType" nillable="true" type="tns:CodeType" />
+  <xs:complexType name="ArrayOfScan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Scan" nillable="true" type="tns:Scan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfScan" nillable="true" type="tns:ArrayOfScan" />
+  <xs:complexType name="Scan">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q5:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeltaQuantity" type="xs:int" />
+          <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="ScannedItemId" type="xs:int" />
+          <xs:element minOccurs="0" name="ScannedTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Scan" nillable="true" type="tns:Scan" />
+  <xs:complexType name="ArrayOfScanResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ScanResult" nillable="true" type="tns:ScanResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfScanResult" nillable="true" type="tns:ArrayOfScanResult" />
+  <xs:complexType name="ArrayOfArticle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Article" nillable="true" type="tns:Article" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticle" nillable="true" type="tns:ArrayOfArticle" />
+  <xs:complexType name="Article">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q6:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EanCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpiryDates" nillable="true" type="tns:ArrayOfExpiryDate" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="InStock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PharmaCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Prices" nillable="true" type="tns:ArrayOfPrice" />
+          <xs:element minOccurs="0" name="QuantityOnStock" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Article" nillable="true" type="tns:Article" />
+  <xs:complexType name="ArrayOfPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Price" nillable="true" type="tns:Price" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrice" nillable="true" type="tns:ArrayOfPrice" />
+  <xs:complexType name="Price">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q7:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Type" type="tns:PriceType" />
+          <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Price" nillable="true" type="tns:Price" />
+  <xs:simpleType name="PriceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="WholesalerPrice" />
+      <xs:enumeration value="SellingPrice" />
+      <xs:enumeration value="PurchasePrice" />
+      <xs:enumeration value="ActionPrice" />
+      <xs:enumeration value="FutureSalesPrice" />
+      <xs:enumeration value="FuturePurchasePrice" />
+      <xs:enumeration value="BaseSellingPrice" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PriceType" nillable="true" type="tns:PriceType" />
+</xs:schema>

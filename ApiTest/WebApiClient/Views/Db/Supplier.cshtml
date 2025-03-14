@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "SupplierSearch";
+}
+
+<h2>Supplier Search</h2>
+
+<div>
+    <!-- Search Box -->
+    <label for="searchTerm">Enter Search Term:</label>
+    <input id="searchTerm" class="form-control" placeholder="Enter a name or term..." />
+
+    <!-- Search Button -->
+    <button id="searchButton" class="btn btn-primary btn-md">Search Suppliers</button>
+</div>
+
+<br />
+
+<!-- Display the JSON response -->
+<div>
+    <label for="jsonResponse">JSON Response:</label>
+    <textarea id="jsonResponse" class="form-control"  style="width: 100%; max-width: 100%; margin: 0; padding: 0;" rows="25" readonly></textarea>
+</div>
+
+@section scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to set the textarea to "Processing..." before AJAX
+            function setProcessing() {
+                $('#jsonResponse').val("Processing...");
+            }
+
+            // Search Suppliers
+            $('#searchButton').click(function () {
+                const searchTerm = $('#searchTerm').val(); // Get the value from the search box
+
+                if (!searchTerm) {
+                    $('#jsonResponse').val("Please enter a search term.");
+                    return;
+                }
+
+                setProcessing();
+                $.ajax({
+                    url: '@Url.Action("GetSuppliersByName", "Db")', // Controller action for supplier search
+                    type: 'GET',
+                    data: { searchTerm: searchTerm }, // Pass search term to the backend
+                    success: function (response) {
+                        // Display the JSON response in the textarea
+                        $('#jsonResponse').val(JSON.stringify(response, null, 2)); // Pretty-print JSON
+                    },
+                    error: function () {
+                        $('#jsonResponse').val("Failed to fetch supplier data. Please try again.");
+                    }
+                });
+            });
+        });
+    </script>
+}

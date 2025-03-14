@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Item" />
+  <xs:complexType name="ArrayOfTupleOfintintExpiryDate4lts7Mm_S">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TupleOfintintExpiryDate4lts7Mm_S" nillable="true" type="tns:TupleOfintintExpiryDate4lts7Mm_S" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTupleOfintintExpiryDate4lts7Mm_S" nillable="true" type="tns:ArrayOfTupleOfintintExpiryDate4lts7Mm_S" />
+  <xs:complexType name="TupleOfintintExpiryDate4lts7Mm_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{2}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ExpiryDate" Namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Item" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="m_Item1" type="xs:int" />
+      <xs:element name="m_Item2" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Item" name="m_Item3" nillable="true" type="q1:ExpiryDate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfintintExpiryDate4lts7Mm_S" nillable="true" type="tns:TupleOfintintExpiryDate4lts7Mm_S" />
+  <xs:complexType name="ArrayOfTupleOfintint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TupleOfintint" nillable="true" type="tns:TupleOfintint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTupleOfintint" nillable="true" type="tns:ArrayOfTupleOfintint" />
+  <xs:complexType name="TupleOfintint">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="m_Item1" type="xs:int" />
+      <xs:element name="m_Item2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TupleOfintint" nillable="true" type="tns:TupleOfintint" />
+  <xs:complexType name="Version">
+    <xs:sequence>
+      <xs:element name="_Build" type="xs:int" />
+      <xs:element name="_Major" type="xs:int" />
+      <xs:element name="_Minor" type="xs:int" />
+      <xs:element name="_Revision" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Version" nillable="true" type="tns:Version" />
+</xs:schema>

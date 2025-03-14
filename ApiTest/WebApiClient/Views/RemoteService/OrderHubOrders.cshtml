@@ -1,0 +1,33 @@
+﻿@using WebApiClient.Models
+@{
+    ViewBag.Title = "OrderHubOrders";
+}
+
+<main>
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="dataGenTitle">
+            <h2 id="dataGenTitle">OrderHub</h2>
+            <p>
+                We are interacting with OrderHub API to create a WebOrder. Here are the steps:
+                <ul>
+                    <li>Get current GLN (SQL): <b>@ViewBag.PharmacyGln</b></li>
+                    <li>Get customer with valid insurance (Persona) (SQL): <b>@ViewBag.CustomerViewModel.FirstName @ViewBag.CustomerViewModel.LastName - @ViewBag.CustomerViewModel.DateOfBirth</b></li>
+                    <li>Get a medicine catB (API)</li>
+                    <li>Create Web order (API)</li>
+                </ul>
+                Next Steps:
+                <ul>
+                    <li>Check in APOS DB if Orders arrives (when implemented)</li>
+                    <li>Update the order status (SQL or API) base on ID: <b>@ViewBag.DataId</b></li>
+                    <li>Check order status in OrderHub</li>
+                    <li>Loop with all the status (Created, Delivered, Cancel, etc...)</li>
+                </ul>
+            </p>
+        </section>
+        <section class="col-md-8" aria-labelledby="dataGenTitle">
+            <h2>Create a web order</h2>
+            <p>API response after creating an order</p>
+            <textarea class="form-control" style="width: 100%; max-width: 100%; margin: 0; padding: 0;" rows="15" readonly>@ViewBag.Response</textarea>
+        </section>
+    </div>
+</main>

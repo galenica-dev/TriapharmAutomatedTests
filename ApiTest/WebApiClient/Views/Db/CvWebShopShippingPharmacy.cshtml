@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "CvWebShopShippingPharmacy";
+}
+
+<h2>CvWebShopShippingPharmacy Management</h2>
+
+<div>
+    <!-- Enable Shipping Pharmacy -->
+    <button id="enableShippingPharmacy" class="btn btn-primary btn-md">Enable Shipping Pharmacy</button>
+
+    <!-- Disable Shipping Pharmacy -->
+    <button id="disableShippingPharmacy" class="btn btn-primary btn-md">Disable Shipping Pharmacy</button>
+
+    <!-- Get Shipping Pharmacy -->
+    <button id="getShippingPharmacy" class="btn btn-primary btn-md">Get Shipping Pharmacy</button>
+</div>
+
+<br />
+
+<!-- Display the current value -->
+<div>
+    <label for="shippingPharmacyValue">Shipping Pharmacy Value:</label>
+    <input id="shippingPharmacyValue" class="form-control" readonly />
+</div>
+
+@section scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to set the textbox to "Processing..." before AJAX
+            function setProcessing() {
+                $('#shippingPharmacyValue').val("Processing...");
+            }
+
+            // Enable Shipping Pharmacy
+            $('#enableShippingPharmacy').click(function () {
+                setProcessing();
+                $.ajax({
+                    url: '@Url.Action("SetCvWebShopShippingPharmacy", "Db")',
+                    type: 'GET',
+                    data: { newValue: "1" },
+                    success: function (response) {
+                        // Parse and display the response value
+                        $('#shippingPharmacyValue').val(response.Value || "Error: No value returned");
+                    },
+                    error: function () {
+                        $('#shippingPharmacyValue').val("Failed to enable Shipping Pharmacy");
+                    }
+                });
+            });
+
+            // Disable Shipping Pharmacy
+            $('#disableShippingPharmacy').click(function () {
+                setProcessing();
+                $.ajax({
+                    url: '@Url.Action("SetCvWebShopShippingPharmacy", "Db")',
+                    type: 'GET',
+                    data: { newValue: "0" },
+                    success: function (response) {
+                        // Parse and display the response value
+                        $('#shippingPharmacyValue').val(response.Value || "Error: No value returned");
+                    },
+                    error: function () {
+                        $('#shippingPharmacyValue').val("Failed to disable Shipping Pharmacy");
+                    }
+                });
+            });
+
+            // Get Shipping Pharmacy
+            $('#getShippingPharmacy').click(function () {
+                setProcessing();
+                $.ajax({
+                    url: '@Url.Action("GetCvWebShopShippingPharmacy", "Db")',
+                    type: 'GET',
+                    success: function (response) {
+                        // Parse and display the response value
+                        $('#shippingPharmacyValue').val(response.Value || "Error: No value returned");
+                    },
+                    error: function () {
+                        $('#shippingPharmacyValue').val("Failed to fetch Shipping Pharmacy value");
+                    }
+                });
+            });
+        });
+    </script>
+}

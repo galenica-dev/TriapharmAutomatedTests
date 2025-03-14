@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Stock" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data.Stock" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" />
+  <xs:complexType name="ArrayOfStockCorrectionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockCorrectionType" nillable="true" type="tns:StockCorrectionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockCorrectionType" nillable="true" type="tns:ArrayOfStockCorrectionType" />
+  <xs:complexType name="StockCorrectionType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q1:ExtensibleDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsPositive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PredefinedEntryId" type="xs:int" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StockCorrectionType" nillable="true" type="tns:StockCorrectionType" />
+  <xs:complexType name="ArrayOfStorageArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StorageArea" nillable="true" type="tns:StorageArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStorageArea" nillable="true" type="tns:ArrayOfStorageArea" />
+  <xs:complexType name="StorageArea">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Hci.ActivePharmacy.Common.Mobile.Contracts.Data" base="q2:IdentifiableOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsRobot" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StorageArea" nillable="true" type="tns:StorageArea" />
+</xs:schema>

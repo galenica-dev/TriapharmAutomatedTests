@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Db";
+}
+
+<main>
+
+    <div class="row">
+        <section class="col-md-6" aria-labelledby="Personas">
+            <h2 id="dataGenTitle">Personas</h2>
+            <p>
+                Using personas allows marketers to tailor messages, campaigns, product offerings, and customer journeys more effectively, ensuring that each marketing effort resonates with a specific, well-understood audience segment. They can also help different teams within a company (like sales, product development, and customer service) align on who the target customer is and how best to serve them.
+            </p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithValidInsurance">Customer with valid Insurance &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithValidInsuranceJson">Customer with valid Insurance (Json) &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithValidRepetition">Customer with valid repetitions &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithValidRepetitionJson">Customer with valid repetitions (Json) &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomersInInstitution">Customer in institution &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomersInInstitutionJson">Customer in institution (Json) &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomersCard">Customers with loyalty card &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomersCardJson">Customers with loyalty card (Json) &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithAVH">Customer with AVS/AHV &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerWithAVHJson">Customer with AVS/AHV (Json) &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerEmployee">Customer employee &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/CustomerEmployeeJson">Customer employee (Json) &raquo;</a></p>
+        </section>
+        <section class="col-md-6" aria-labelledby="MiscData">
+            <h2 id="dbDataTitle">Misc data</h2>
+            <p>Other date like Institutions list, Lima product, etc...</p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/Institutions">Get list of institutions &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/InstitutionsJson">Get list of institutions (Json) &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/LimaProducts">Get list of LIMA products &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/LimaProductsJson">Get list of LIMA products (Json) &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/WebApiClient/Db/Supplier">Get list of wholesalers (suppliers) &raquo;</a></p>
+        </section>
+    </div>
+    <div class="row">
+        <section class="col-md-12" aria-labelledby="CommonVar">
+            <h2 id="dataGenTitle">Common Var</h2>
+            <p>
+                Update the common var
+            </p>
+            <a class="btn btn-outline-dark" href="/WebApiClient/Db/SetCvLoginSecondsAcceptance?newValue=15">Set cvLoginSecondsAcceptance to 15 sec (Json) &raquo;</a> <a class="btn btn-outline-dark" href="/WebApiClient/Db/GetCvLoginSecondsAcceptance">Get cvLoginSecondsAcceptance (Json) &raquo;</a></p>
+            </p><a class="btn btn-outline-dark" href="/WebApiClient/Db/CvWebShopShippingPharmacy">Handle CvWebShopShippingPharmacy &raquo;</a></p>
+        </section>
+    </div>
+
+</main>

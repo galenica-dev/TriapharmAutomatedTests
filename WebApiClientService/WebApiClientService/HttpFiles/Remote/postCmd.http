@@ -1,0 +1,15 @@
+### Execute a Command
+POST http://localhost:8080/remote/cmd/execute
+Content-Type: application/json
+
+{
+    "cmd": "dir"
+}
+
+### Another example - Run a custom command
+POST http://localhost:8080/remote/cmd/execute
+Content-Type: application/json
+
+{
+    "cmd": "echo Hello, World!"
+}
