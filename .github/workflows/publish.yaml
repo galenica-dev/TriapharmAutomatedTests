@@ -1,4 +1,4 @@
-name: ASP.NET 8 CI/CD
+name: WebApiClientService (ASP NET 8)
 
 on:
   push:
